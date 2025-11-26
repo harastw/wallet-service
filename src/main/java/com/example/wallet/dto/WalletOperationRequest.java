@@ -10,7 +10,6 @@ public class WalletOperationRequest {
     private OperationType operationType;
     private BigDecimal amount;
 
-    // Getters and Setters
     public UUID getValletId() { return valletId; }
     public void setValletId(UUID valletId) { this.valletId = valletId; }
 
@@ -25,3 +24,4 @@ public class WalletOperationRequest {
     }
 
 }
+
