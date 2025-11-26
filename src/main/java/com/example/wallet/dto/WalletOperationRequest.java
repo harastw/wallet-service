@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 import java.util.UUID;
 
 public class WalletOperationRequest {
-    private UUID valletId; // intentional typo to match spec
+    private UUID valletId;
     private OperationType operationType;
     private BigDecimal amount;
 
@@ -23,4 +23,5 @@ public class WalletOperationRequest {
     public enum OperationType {
         DEPOSIT, WITHDRAW
     }
+
 }
