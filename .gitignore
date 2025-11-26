@@ -1,26 +1,21 @@
-# Compiled Java classes
 target/
 
-# IDE
 .idea/
 *.iml
 *.iws
 .vscode/
 
-# OS
 .DS_Store
 Thumbs.db
 
-# Logs
 *.log
 
-# Env files (если есть)
 .env
 
-# Но сохраняем важное:
 !pom.xml
 !Dockerfile
 !docker-compose.yml
 !src/
 !README.md
+
 !.gitignore
