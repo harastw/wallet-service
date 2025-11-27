@@ -29,10 +29,12 @@ docker-compose up --build
 Либо создайте .env
 ```env
 SERVER_PORT=8080
+
+DB_HOST=db
 DB_PORT=5432
 DB_NAME=walletdb
 DB_USER=postgres
-DB_PASS=postgres
+DB_PASS=mysecretpassword
 ```
 
 И запустите просто с помощью
