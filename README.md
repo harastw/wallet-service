@@ -18,4 +18,25 @@ REST API для управления кошельками с поддержко�
 mvn clean package -DskipTests
 
 # Запуск
+SERVER_PORT=8080 \
+DB_PORT=5432 \
+DB_NAME=walletdb \
+DB_USER=postgres \
+DB_PASS=postgres \
 docker-compose up --build
+
+# Либо создайте .env
+SERVER_PORT=8080
+DB_PORT=5432
+DB_NAME=walletdb
+DB_USER=postgres
+DB_PASS=postgres
+
+# И запустите просто с помощью
+docker-compose up --build
+
+# Проверка работы
+curl -X POST http://localhost:8080/api/v1/wallet \
+  -H "Content-Type: application/json" \
+  -d '{"valletId":"f47ac10b-58cc-4372-a567-0e02b2c3d479","operationType":"DEPOSIT","amount":100}'
+
