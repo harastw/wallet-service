@@ -24,19 +24,24 @@ DB_NAME=walletdb \
 DB_USER=postgres \
 DB_PASS=postgres \
 docker-compose up --build
+```
 
-# Либо создайте .env
+Либо создайте .env
+```env
 SERVER_PORT=8080
 DB_PORT=5432
 DB_NAME=walletdb
 DB_USER=postgres
 DB_PASS=postgres
+```
 
-# И запустите просто с помощью
+И запустите просто с помощью
+```bash
 docker-compose up --build
-
-# Проверка работы
+```
+Проверка работы
+```bash
 curl -X POST http://localhost:8080/api/v1/wallet \
   -H "Content-Type: application/json" \
   -d '{"valletId":"f47ac10b-58cc-4372-a567-0e02b2c3d479","operationType":"DEPOSIT","amount":100}'
-
+```
