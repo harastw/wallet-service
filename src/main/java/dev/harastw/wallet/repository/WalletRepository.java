@@ -1,14 +1,15 @@
-package com.example.wallet.repository;
+package dev.harastw.wallet.repository;
 
-import com.example.wallet.model.Wallet;
+import java.util.Optional;
+import java.util.UUID;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Lock;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import dev.harastw.wallet.model.Wallet;
 import jakarta.persistence.LockModeType;
-import java.util.Optional;
-import java.util.UUID;
 
 @Repository
 public interface WalletRepository extends JpaRepository<Wallet, UUID> {

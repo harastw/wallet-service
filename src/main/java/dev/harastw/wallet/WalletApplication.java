@@ -1,4 +1,4 @@
-package com.example.wallet;
+package dev.harastw.wallet;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

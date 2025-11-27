@@ -1,12 +1,11 @@
-package com.example.wallet.exception;
+package dev.harastw.wallet.exception;
+
+import java.net.URI;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ProblemDetail;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-
-import java.net.URI;
-import java.util.UUID;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {

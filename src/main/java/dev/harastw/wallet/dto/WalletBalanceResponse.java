@@ -1,8 +1,9 @@
-package com.example.wallet.dto;
+package dev.harastw.wallet.dto;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import java.math.BigDecimal;
 import java.util.UUID;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 public record WalletBalanceResponse(
     UUID walletId,

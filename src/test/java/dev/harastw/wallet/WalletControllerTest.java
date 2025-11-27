@@ -1,9 +1,5 @@
-package com.example.wallet;
+package dev.harastw.wallet;
 
-import com.example.wallet.dto.WalletOperationRequest;
-import com.example.wallet.model.Wallet;
-import com.example.wallet.repository.WalletRepository;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,12 +8,19 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.testcontainers.service.connection.ServiceConnection;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 import org.testcontainers.containers.PostgreSQLContainer;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import dev.harastw.wallet.dto.WalletOperationRequest;
+import dev.harastw.wallet.model.Wallet;
+import dev.harastw.wallet.repository.WalletRepository;
 
 @SpringBootTest
 @AutoConfigureWebMvc

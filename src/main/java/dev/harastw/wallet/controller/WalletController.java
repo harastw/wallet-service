@@ -1,14 +1,20 @@
-package com.example.wallet.controller;
-
-import com.example.wallet.dto.WalletBalanceResponse;
-import com.example.wallet.dto.WalletOperationRequest;
-import com.example.wallet.service.WalletService;
-import jakarta.validation.Valid;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+package dev.harastw.wallet.controller;
 
 import java.math.BigDecimal;
 import java.util.UUID;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import dev.harastw.wallet.dto.WalletBalanceResponse;
+import dev.harastw.wallet.dto.WalletOperationRequest;
+import dev.harastw.wallet.service.WalletService;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/v1")

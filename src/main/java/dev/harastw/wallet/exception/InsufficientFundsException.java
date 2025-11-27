@@ -1,4 +1,4 @@
-package com.example.wallet.exception;
+package dev.harastw.wallet.exception;
 
 import java.util.UUID;
 

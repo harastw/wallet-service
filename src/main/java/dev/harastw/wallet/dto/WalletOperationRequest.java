@@ -1,6 +1,4 @@
-package com.example.wallet.dto;
-
-import com.fasterxml.jackson.annotation.JsonProperty;
+package dev.harastw.wallet.dto;
 
 import java.math.BigDecimal;
 import java.util.UUID;

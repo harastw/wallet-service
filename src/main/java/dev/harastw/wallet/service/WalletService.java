@@ -1,17 +1,18 @@
-package com.example.wallet.service;
+package dev.harastw.wallet.service;
 
-import com.example.wallet.dto.WalletOperationRequest;
-import com.example.wallet.exception.InsufficientFundsException;
-import com.example.wallet.exception.WalletNotFoundException;
-import com.example.wallet.model.Wallet;
-import com.example.wallet.repository.WalletRepository;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.UUID;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.math.BigDecimal;
-import java.util.UUID;
-import java.math.RoundingMode;
+import dev.harastw.wallet.dto.WalletOperationRequest;
+import dev.harastw.wallet.exception.InsufficientFundsException;
+import dev.harastw.wallet.exception.WalletNotFoundException;
+import dev.harastw.wallet.model.Wallet;
+import dev.harastw.wallet.repository.WalletRepository;
 
 @Service
 public class WalletService {
